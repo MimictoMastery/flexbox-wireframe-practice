@@ -1,6 +1,6 @@
 body {
-    margin:0;
-    background: black  ;
+    margin: 0;
+    background: black;
     font-family: Arial, sans-serif;
 }
 
@@ -8,27 +8,48 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 40px;
+    padding: 20px;
     background: rgb(217, 211, 211);
-    width: 350px; 
 }
 
 header {
     background: rgb(152, 7, 82);
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
-    height: 50px;
+   font-size: 30px;
+}
+
+.middle {
+    display: flex;
+    gap: 15px;  
+    align-items: stretch;
+}
+
+aside {
+    background: rgb(43,82,166);
+    color: white;
     font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
     .articles {
+       
         background: rgb(110, 177, 110);
         padding: 15px;
         border-radius: 10px;
         color: white;
-
+        
+        flex: 3;
+        
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -40,24 +61,31 @@ header {
         font-size: 25px;
         padding: 25px;
         border-radius: 10px;
+        color: white
     }
     
-    aside {
-        background: rgb(43, 82, 166);
-        color: white;
-        font-size: 30px;
-        text-align: center;
-        height: 50px;
-        padding: 5px;
-        border-radius: 10px;
+
+   footer {
+    background: rgb(202, 90, 10);
+    font-size: 30px; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    @media (max-width: 767px) {
+    
+        .middle {
+        flex-direction: column;
     }
 
-    footer {
-        background: rgb(202, 90, 10);
-        font-size: 30px; 
-        color: white;
-        text-align: center;
-        height: 50px;
-        padding: 5px;
-        border-radius: 10px;
+    aside,
+.articles {
+    width: 100%;
+}
+
+    aside {
+        min-height: 120px;
     }
+}
